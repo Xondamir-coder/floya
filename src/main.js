@@ -1,3 +1,6 @@
+import Lenis from 'lenis';
+import './animations';
+
 const checkbox = document.querySelectorAll('.checkbox');
 const overlay = document.querySelector('.overlay');
 
@@ -65,3 +68,14 @@ const initRegisterForm = () => {
 };
 
 initRegisterForm();
+
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
