@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as variables;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: clamp(0.875rem, 1vw + 0.1rem, 1.5rem);
+}
+body {
+	font-family: variables.$font-base;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	font: inherit;
+}
+input {
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	border: none;
+}
+label[for] {
+	cursor: pointer;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+	letter-spacing: -0.01em;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+	pointer-events: none;
+}

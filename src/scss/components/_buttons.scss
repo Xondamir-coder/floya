@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as variables;
+
+.button-primary {
+	background-color: variables.$clr-primary;
+	color: #fff;
+	padding: 18px 0;
+	font-weight: 600;
+	border-radius: 16px;
+}
+.button-tel {
+	box-shadow: 0px 6px 16px 0px #9c789314;
+	border: 2px solid #d62f504d;
+	background-color: #fff;
+	color: variables.$clr-primary;
+	display: flex;
+	align-items: center;
+	padding: 1.2rem 1.8rem;
+	border-radius: 100px;
+	gap: 1.2rem;
+	font-weight: 600;
+	justify-content: center;
+	font-size: 1.2rem;
+	transition-property: background-color, color, border-color, box-shadow, transform;
+	transition-duration: 0.4s;
+	&:hover {
+		// color: variables.$clr-light;
+		// background-color: transparent;
+		// border-color: variables.$clr-light;
+		box-shadow: 0px 0 10px 3px variables.$clr-light;
+		transform: translateY(-6px);
+		.icon {
+			// fill: variables.$clr-light;
+		}
+	}
+	&:active {
+		transform: translateY(-3px);
+		box-shadow: 0px 0 6px 1px variables.$clr-light;
+	}
+	.icon {
+		width: 50%;
+		height: 50%;
+	}
+	.icon-container {
+		width: 2.3rem;
+		height: 2.3rem;
+	}
+}

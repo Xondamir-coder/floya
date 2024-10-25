@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+
+.container {
+	background-color: variables.$clr-background;
+	color: variables.$clr-secondary;
+}
+.logo {
+	width: 89px;
+	height: 62px;
+	@media only screen and (max-width: 768px) {
+		width: 56px;
+		height: 39px;
+	}
+}
+.overlay {
+	position: fixed;
+	inset: 0;
+	background-color: #0e090a8f;
+	transition: opacity 0.5s;
+	z-index: 10;
+	@include mixins.invisible;
+}
+.checkbox {
+	display: none;
+	&:checked ~ .overlay {
+		@include mixins.visible;
+	}
+}
+.menu-checkbox {
+	&:not(:checked) ~ .menu {
+		transform: translateX(100%);
+	}
+}
+
+.register-checkbox {
+	&:not(:checked) ~ .modal-container {
+		transform: scale(0.7);
+		opacity: 0;
+		@media only screen and (max-width: 768px) {
+			transform: translateY(25%);
+			opacity: 0;
+		}
+	}
+	&:not(:checked) ~ .modal-container .register {
+		pointer-events: none;
+	}
+}

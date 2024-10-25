@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as variables;
+
+.header {
+	background: #d62f501a;
+	backdrop-filter: blur(28.5px);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	--resize-val: 4vw + 0.75rem;
+	padding: 1.6rem clamp(26px, var(--resize-val), 5rem);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	@media only screen and (max-width: 1240px) {
+		--resize-val: 3.5vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		grid-template-columns: 1fr 2fr;
+	}
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: repeat(3, max-content);
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__button {
+		transition: opacity 0.4s;
+		label {
+			cursor: pointer;
+		}
+		&:hover {
+			opacity: 0.5;
+		}
+		.icon {
+			width: 1.8rem;
+			height: 1.8rem;
+			fill: variables.$clr-light;
+		}
+	}
+	&__right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__tel {
+		display: flex;
+		gap: 1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		align-items: center;
+		color: variables.$clr-light;
+		&--big {
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+		&--small {
+			@media only screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+		&:hover {
+			.icon-container {
+				background-color: variables.$clr-light;
+			}
+			.icon {
+				fill: variables.$clr-primary !important;
+			}
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+}

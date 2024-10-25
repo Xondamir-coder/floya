@@ -1,0 +1,130 @@
+@use 'variables' as variables;
+
+.section-padding {
+	--resize-val: 4vw + 0.75rem;
+	padding: 1.6rem clamp(12px, var(--resize-val), 5rem);
+
+	@media only screen and (max-width: 1240px) {
+		--resize-val: 3.5vw;
+	}
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.m-l-auto {
+	margin-left: auto;
+}
+.align-self-center {
+	align-self: center;
+}
+
+.full-w-h {
+	width: 100%;
+	height: 100%;
+}
+
+.bg-primary {
+	background-color: variables.$clr-primary;
+}
+.bg-secondary {
+	background-color: variables.$clr-secondary;
+}
+.bg-tertiary {
+	background-color: variables.$clr-tertiary;
+}
+.bg-background {
+	background-color: variables.$clr-background;
+}
+.bg-light {
+	background-color: variables.$clr-light;
+}
+.bg-dark-background {
+	background-color: variables.$clr-dark-background;
+}
+.bg-divider {
+	background-color: variables.$clr-divider;
+}
+.bg-transparent {
+	background-color: transparent;
+}
+
+.text-primary {
+	color: variables.$clr-primary;
+}
+.text-secondary {
+	color: variables.$clr-secondary;
+}
+.text-tertiary {
+	color: variables.$clr-tertiary;
+}
+.text-background {
+	color: variables.$clr-background;
+}
+.text-light {
+	color: variables.$clr-light;
+}
+.text-dark-background {
+	color: variables.$clr-dark-background;
+}
+.text-divider {
+	color: variables.$clr-divider;
+}
+.text-white {
+	color: #fff;
+}
+
+.fill-white {
+	fill: #fff;
+}
+.fill-primary {
+	fill: variables.$clr-primary;
+}
+.fill-secondary {
+	fill: variables.$clr-secondary;
+}
+.fill-tertiary {
+	fill: variables.$clr-tertiary;
+}
+.fill-background {
+	fill: variables.$clr-background;
+}
+.fill-light {
+	fill: variables.$clr-light;
+}
+.fill-dark-background {
+	fill: variables.$clr-dark-background;
+}
+.fill-divider {
+	fill: variables.$clr-divider;
+}
+.fill-transparent {
+	fill: transparent;
+}
+
+.border-clr-white {
+	border-color: #fff;
+}
+.border-clr-primary {
+	border-color: variables.$clr-primary;
+}
+.border-clr-secondary {
+	border-color: variables.$clr-secondary;
+}
+.border-clr-tertiary {
+	border-color: variables.$clr-tertiary;
+}
+.border-clr-background {
+	border-color: variables.$clr-background;
+}
+.border-clr-light {
+	border-color: variables.$clr-light;
+}
+.border-clr-dark-background {
+	border-color: variables.$clr-dark-background;
+}
+.border-clr-divider {
+	border-color: variables.$clr-divider;
+}
+.border-clr-transparent {
+	border-color: transparent;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https:/fonts.googleapis.com" />
+		<link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin />
+		<link
+			href="https:/fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet" />
+		<title>Floya Landing</title>
+	</head>
+	<body>
+		<main class="container">
+			<input type="checkbox" class="menu-checkbox checkbox" id="menu-checkbox" />
+			<input type="checkbox" class="register-checkbox checkbox" id="register-checkbox" />
+			<header class="header section-padding">
+				<a href="tel:+8 800 800 80 80" class="header__tel header__tel--small">
+					<div class="icon-container">
+						<svg class="icon fill-light">
+							<use xlink:href="/src/assets/sprite.svg#phone" />
+						</svg>
+					</div>
+				</a>
+				<a href="#">
+					<svg class="logo fill-white">
+						<use xlink:href="/src/assets/sprite.svg#logo" />
+					</svg>
+				</a>
+				<div class="header__right">
+					<ul class="header__links">
+						<li>
+							<a class="icon-container bg-light border-clr-transparent" href="#">
+								<svg class="icon fill-primary">
+									<use xlink:href="/src/assets/sprite.svg#mail" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="icon-container bg-light border-clr-transparent" href="#">
+								<svg class="icon fill-primary">
+									<use xlink:href="/src/assets/sprite.svg#whatsapp" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="icon-container bg-light border-clr-transparent" href="#">
+								<svg class="icon fill-primary">
+									<use xlink:href="/src/assets/sprite.svg#telegram" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<a href="tel:+8 800 800 80 80" class="header__tel header__tel--big">
+						<div class="icon-container border-clr-light">
+							<svg class="icon fill-light">
+								<use xlink:href="/src/assets/sprite.svg#phone" />
+							</svg>
+						</div>
+						<span>8-800-800-80-80</span>
+					</a>
+					<button aria-label="menu toggle" class="header__button">
+						<label for="menu-checkbox">
+							<svg class="icon">
+								<use xlink:href="/src/assets/sprite.svg#hamburger" />
+							</svg>
+						</label>
+					</button>
+				</div>
+			</header>
+			<div class="overlay full-w-h"></div>
+			<menu class="menu">
+				<svg class="logo fill-primary">
+					<use xlink:href="/src/assets/sprite.svg#logo" />
+				</svg>
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#"> Калькулятор заказов </a>
+					</li>
+					<li class="menu__item">
+						<a href="#"> Настройка первой рекламной компании-бесплатно </a>
+					</li>
+					<li class="menu__item">
+						<a href="#"> Основной сайт </a>
+					</li>
+					<li class="menu__item">
+						<a href="#"> Наше приложение в Telegram </a>
+					</li>
+				</ul>
+				<ul class="menu__links">
+					<li>
+						<a class="menu__icon-container bg-dark-background" href="#">
+							<svg class="menu__icon fill-white">
+								<use xlink:href="/src/assets/sprite.svg#whatsapp" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a class="menu__icon-container bg-dark-background" href="#">
+							<svg class="menu__icon fill-white menu__icon--star">
+								<use xlink:href="/src/assets/sprite.svg#star" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a class="menu__icon-container bg-dark-background" href="#">
+							<svg class="menu__icon fill-white menu__icon--telegram">
+								<use xlink:href="/src/assets/sprite.svg#telegram" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a class="menu__icon-container bg-dark-background" href="#">
+							<svg class="menu__icon fill-white">
+								<use xlink:href="/src/assets/sprite.svg#vk" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a class="menu__icon-container bg-dark-background" href="#">
+							<svg class="menu__icon fill-white">
+								<use xlink:href="/src/assets/sprite.svg#mail" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</menu>
+			<div class="modal-container">
+				<div class="register">
+					<label for="register-checkbox" class="register__close">
+						<svg class="icon__close fill-dark-background">
+							<use xlink:href="/src/assets/sprite.svg#close" />
+						</svg>
+					</label>
+					<svg class="register__logo fill-dark-background align-self-center">
+						<use xlink:href="/src/assets/sprite.svg#logo" />
+					</svg>
+					<h3 class="register__title align-self-center">
+						<span class="text-primary">Оставьте номер</span>
+						и мы свяжемся с Вами
+					</h3>
+					<form class="register__form">
+						<input
+							class="register__input"
+							required
+							type="text"
+							name="name"
+							placeholder="Ваше ФИО" />
+						<input
+							class="register__input"
+							required
+							type="tel"
+							name="name"
+							placeholder="Ваш Телефон" />
+						<div class="register__select">
+							<input
+								type="checkbox"
+								class="register__checkbox"
+								id="select-checkbox" />
+							<label class="register__label" for="select-checkbox">
+								<input
+									required
+									placeholder="Удобное время для звонка"
+									name="time" />
+								<svg class="register__icon">
+									<use xlink:href="/src/assets/sprite.svg#arrow-down" />
+								</svg>
+							</label>
+							<ul class="register__options">
+								<li class="register__option">
+									<label for="select-checkbox"> 10:00 - 12:00 </label>
+								</li>
+								<li class="register__option">
+									<label for="select-checkbox"> 12:00 - 14:00 </label>
+								</li>
+								<li class="register__option">
+									<label for="select-checkbox"> 14:00 - 16:00 </label>
+								</li>
+								<li class="register__option">
+									<label for="select-checkbox"> 16:00 - 18:00 </label>
+								</li>
+								<li class="register__option">
+									<label for="select-checkbox"> 18:00 - 20:00 </label>
+								</li>
+							</ul>
+						</div>
+						<button type="submit" class="button-primary">Зарегистрироваться</button>
+					</form>
+					<p class="register__policy">
+						Нажимая на кнопку Вы соглашаетесь с
+						<a class="text-primary" href="#">Политикой конфиденциальности</a>
+					</p>
+				</div>
+			</div>
+			<section class="hero section-padding text-white overflow-hidden">
+				<div class="hero__top">
+					<h1 class="hero__title">Занимайся любимым делом</h1>
+					<h2 class="hero__subtitle">Доверь заботу о продажах floya</h2>
+				</div>
+				<div class="hero__middle">
+					<svg width="6" height="118" class="hero__thingy--small">
+						<use xlink:href="/src/assets/sprite.svg#hero-thingy-small" />
+					</svg>
+					<p>Быстрый старт:</p>
+					<ul class="hero__list">
+						<li class="hero__item">
+							<svg class="hero__thingy">
+								<use xlink:href="/src/assets/sprite.svg#hero-thingy" />
+							</svg>
+							<span class="hero__item-text">Регистрация</span>
+						</li>
+						<li class="hero__item">
+							<svg class="hero__thingy">
+								<use xlink:href="/src/assets/sprite.svg#hero-thingy" />
+							</svg>
+							<span class="hero__item-text">Добавление товара</span>
+						</li>
+						<li class="hero__item">
+							<svg class="hero__thingy">
+								<use xlink:href="/src/assets/sprite.svg#hero-thingy" />
+							</svg>
+							<span class="hero__item-text">Торгуем на FLOYA</span>
+						</li>
+					</ul>
+				</div>
+				<div class="hero__bottom">
+					<label class="hero__button" for="register-checkbox"> Зарегистрироваться </label>
+					<p>*получите подробную информацию об условиях</p>
+					<a href="tel:+8 800 800 80 80" class="button-tel m-l-auto">
+						<div class="icon-container border-clr-primary">
+							<svg class="icon fill-primary">
+								<use xlink:href="/src/assets/sprite.svg#phone" />
+							</svg>
+						</div>
+						<span>Остались вопросы?</span>
+					</a>
+				</div>
+				<div class="hero__bg">
+					<svg class="hero__flower">
+						<use xlink:href="/src/assets/sprite.svg#big-flower" />
+					</svg>
+					<img
+						class="hero__image"
+						src="/src/assets/images/hero-flower.png"
+						alt="hero flowers" />
+				</div>
+			</section>
+		</main>
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

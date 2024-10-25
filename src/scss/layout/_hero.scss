@@ -1,0 +1,195 @@
+@use '../abstracts/variables' as variables;
+
+.hero {
+	--border-radius: 42px;
+	background-color: variables.$clr-primary;
+	padding-top: max(10vw, 110px);
+	padding-bottom: max(4vw, 20px);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: max(5vw, 33px);
+	position: relative;
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	@media only screen and (min-width: 1200px) {
+		min-height: 100vh;
+	}
+	@media only screen and (max-width: 768px) {
+		--border-radius: 12px;
+	}
+	& > *:not(.hero__bg) {
+		z-index: 2;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		justify-items: flex-end;
+		& > * {
+			grid-area: 1/1/2/2;
+			align-content: flex-end;
+		}
+	}
+	&__image {
+		align-self: flex-end;
+		// margin-left: auto;
+		margin-right: 1rem;
+		transform: translateY(4rem);
+		width: 50%;
+		height: auto;
+		object-fit: contain;
+		min-width: 300px;
+
+		@media only screen and (max-width: 768px) {
+			align-self: center;
+			transform: translate(5rem, 0);
+		}
+	}
+	&__flower {
+		min-width: 403px;
+		width: 70%;
+		aspect-ratio: 1030/1652;
+		transform: translate(8rem, -5rem);
+		@media only screen and (max-width: 768px) {
+			transform: translate(7rem, 10%);
+		}
+	}
+	&__button {
+		color: variables.$clr-primary;
+		background-color: #fff;
+		border-radius: 15px;
+		flex-basis: 25%;
+		font-size: 1.1rem;
+		font-weight: 600;
+		border: 1px solid transparent;
+		transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+		padding: 1.5rem;
+		text-align: center;
+		&:hover {
+			border-color: variables.$clr-light;
+			color: variables.$clr-light;
+			background-color: variables.$clr-primary;
+		}
+		@media only screen and (max-width: 768px) {
+			padding: 20px;
+			border-radius: 20px;
+		}
+	}
+
+	&__tel {
+		margin-left: auto;
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+		@media only screen and (max-width: 500px) {
+			align-items: stretch;
+			flex-direction: column;
+			gap: 14px;
+		}
+		.button-tel {
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+		p {
+			color: variables.$clr-pink;
+			font-size: 0.9rem;
+			font-weight: 500;
+			max-width: 20ch;
+			@media only screen and (max-width: 500px) {
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	&__top {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	&__item {
+		position: relative;
+		display: grid;
+		&:last-child .hero__thingy {
+			@media only screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+		& > * {
+			grid-area: 1/1/2/2;
+		}
+		&-text {
+			background-color: variables.$clr-primary;
+			padding: max(0.6rem, 6px) 1.35rem;
+			border: 1px solid #ffffff80;
+			border-radius: 100px;
+			z-index: 2;
+			font-size: 1.1rem;
+			@media only screen and (max-width: 500px) {
+				font-size: 12px;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		gap: 1.5rem;
+		overflow: hidden;
+		@media only screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+			margin-left: 16px;
+		}
+	}
+	&__middle {
+		display: flex;
+		flex-direction: column;
+		gap: 1.3rem;
+		position: relative;
+
+		p {
+			font-size: clamp(14px, 1vw + 0.6rem, 26px);
+			font-weight: 600;
+		}
+	}
+	&__title {
+		max-width: 50%;
+		font-weight: 700;
+		font-size: clamp(34px, 4.25vw + 0.5rem, 75px);
+		line-height: 1;
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: clamp(14px, 1.9vw + 0.5rem, 40px);
+		color: variables.$clr-pink;
+		@media only screen and (max-width: 500px) {
+			max-width: 15ch;
+		}
+	}
+	&__thingy {
+		width: 10rem;
+		height: 6px;
+		right: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateX(15px);
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+		&--small {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 110%;
+			@media only screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+	}
+}
