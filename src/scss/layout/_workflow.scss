@@ -4,6 +4,22 @@
 	display: flex;
 	flex-direction: column;
 	gap: 4.5rem;
+	overflow: hidden;
+	position: relative;
+	&__leaf {
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+		&-1 {
+			bottom: -12%;
+			left: -12%;
+		}
+		&-2 {
+			top: -10%;
+			right: -20%;
+			transform: rotate(180deg);
+		}
+	}
 	&__container {
 		display: grid;
 		grid-template-columns: 0.7fr 0.4fr;

@@ -6,12 +6,22 @@
 	display: flex;
 	flex-direction: column;
 	gap: max(4vw, 40px);
+	overflow: hidden;
+	position: relative;
 
 	@media only screen and (max-width: 768px) {
 		margin-top: 34px;
 		padding-top: 0;
 	}
+	&__leaf {
+		bottom: -15%;
+		left: -15%;
 
+		@media only screen and (max-width: 768px) {
+			bottom: 10%;
+			left: -20%;
+		}
+	}
 	&__list {
 		list-style: none;
 		display: grid;
