@@ -3,7 +3,11 @@ import './animations';
 
 const checkbox = document.querySelectorAll('.checkbox');
 const overlay = document.querySelector('.overlay');
+const copyrightDate = document.querySelectorAll('.copyright-date');
 
+copyrightDate.forEach(el => {
+	el.textContent = new Date().getFullYear();
+});
 overlay.addEventListener('click', () => {
 	checkbox.forEach(el => (el.checked = false));
 });

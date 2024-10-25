@@ -1,19 +1,28 @@
 {
-  "name": "floya",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "sass": "^1.80.4",
-    "vite": "^5.4.9"
-  },
-  "dependencies": {
-    "gsap": "^3.12.5",
-    "lenis": "^1.1.14"
-  }
+	"name": "floya",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"browserslist": [
+		"> 0.2%",
+		"last 3 versions",
+		"Firefox ESR",
+		"not dead",
+		"ie >= 9"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"sass": "^1.80.4",
+		"vite": "^5.4.9"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.20",
+		"gsap": "^3.12.5",
+		"lenis": "^1.1.14",
+		"postcss": "^8.4.47"
+	}
 }
