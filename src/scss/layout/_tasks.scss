@@ -1,0 +1,70 @@
+@use '../abstracts/mixins' as mixins;
+
+.tasks {
+	@include mixins.curvy-section;
+	--resize-val: 4vw + 0.75rem;
+	padding: clamp(32px, var(--resize-val), 5rem) clamp(12px, var(--resize-val), 5rem);
+	display: flex;
+	flex-direction: column;
+	gap: max(4vw, 31px);
+
+	@media only screen and (max-width: 1240px) {
+		--resize-val: 3.5vw;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		column-gap: 24px;
+		row-gap: 15px;
+	}
+	&__item {
+		padding: 33px 31px;
+		border-radius: 16px;
+		border: 1px solid #0000001a;
+		display: flex;
+		font-size: max(0.9rem, 14px);
+		padding-right: 0;
+		line-height: 1.4;
+		justify-content: space-between;
+
+		&-left {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+			justify-content: space-evenly;
+		}
+		&-text {
+			position: relative;
+			padding-left: 1rem;
+			&::before {
+				@include mixins.bullet-point(5px);
+			}
+		}
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: max(1vw, 10px);
+		}
+		&-image {
+			width: 40%;
+			height: auto;
+			object-fit: contain;
+			filter: drop-shadow(0px 13px 8px rgba(0, 0, 0, 0.4));
+			@media only screen and (max-width: 768px) {
+				width: 30%;
+			}
+		}
+		&-title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			line-height: 1.1;
+		}
+		span {
+			font-weight: 700;
+		}
+		@media only screen and (max-width: 768px) {
+			padding: 17px 22px;
+			padding-right: 0;
+		}
+	}
+}

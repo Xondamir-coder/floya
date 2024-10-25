@@ -2,7 +2,7 @@
 
 .section-padding {
 	--resize-val: 4vw + 0.75rem;
-	padding: 1.6rem clamp(12px, var(--resize-val), 5rem);
+	padding: 5rem clamp(12px, var(--resize-val), 5rem);
 
 	@media only screen and (max-width: 1240px) {
 		--resize-val: 3.5vw;

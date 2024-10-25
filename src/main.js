@@ -1,5 +1,3 @@
-import './scss/main.scss';
-
 const checkbox = document.querySelectorAll('.checkbox');
 const overlay = document.querySelector('.overlay');
 
@@ -26,34 +24,43 @@ const formatPhone = input => {
 	return formatted;
 };
 const initRegisterForm = () => {
-	const formEl = document.querySelector('.register__form');
-	const telEl = document.querySelector('.register__form input[type="tel"]');
-	const optionsEl = document.querySelector('.register__options');
-	const labelEl = document.querySelector('.register__label input');
+	const formEl = document.querySelectorAll('.form');
+	const telEl = document.querySelectorAll('.form input[type="tel"]');
+	const optionsEl = document.querySelectorAll('.form__options');
+	const labelEl = document.querySelectorAll('.form__label input');
 	const minTelLength = 18;
 
-	formEl.addEventListener('submit', e => {
-		e.preventDefault();
+	formEl.forEach(el =>
+		addEventListener('submit', e => {
+			e.preventDefault();
 
-		if (telEl.value.length != minTelLength) return;
+			if (telEl.value.length != minTelLength) return;
 
-		const formData = new FormData(formEl);
-		console.log(...formData);
+			const formData = new FormData(formEl);
+			console.log(...formData);
+		})
+	);
+
+	telEl.forEach(el => {
+		el.addEventListener('focus', e => {
+			if (!e.target.value) e.target.value = '+7 ';
+		});
+		el.addEventListener('input', () => {
+			const input = el.value.replace(/\D/g, ''); // Remove non-digit characters
+			el.value = formatPhone(input);
+		});
 	});
-	telEl.addEventListener('focus', e => {
-		if (!e.target.value) e.target.value = '+7 ';
-	});
-	telEl.addEventListener('input', () => {
-		const input = telEl.value.replace(/\D/g, ''); // Remove non-digit characters
-		telEl.value = formatPhone(input);
-	});
-	optionsEl.addEventListener('click', e => {
-		const { target } = e;
 
-		if (!target.closest('.register__option label')) return;
+	optionsEl.forEach((el, i) => {
+		const label = Array.from(labelEl)[i];
+		el.addEventListener('click', e => {
+			const { target } = e;
 
-		const val = target.closest('.register__option label').textContent.trim();
-		labelEl.value = val;
+			if (!target.closest('.form__option label')) return;
+
+			const val = target.closest('.form__option label').textContent.trim();
+			label.value = val;
+		});
 	});
 };
 

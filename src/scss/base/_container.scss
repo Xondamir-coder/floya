@@ -1,9 +1,40 @@
 @use '../abstracts/variables' as variables;
 @use '../abstracts/mixins' as mixins;
 
+.section-title {
+	font-size: clamp(26px, 3.3vw + 0.5rem, 56px);
+	font-weight: 700;
+	line-height: 1;
+}
+.section-backticktext {
+	display: flex;
+	gap: 1.6rem;
+	align-items: flex-start;
+	&__text {
+		margin-top: 10px;
+		max-width: 30ch;
+		font-weight: 500;
+		font-size: 1.2rem;
+	}
+}
+.section-top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.backtick {
+	width: 2rem;
+	aspect-ratio: 38/29;
+}
 .container {
 	background-color: variables.$clr-background;
 	color: variables.$clr-secondary;
+}
+.leaf {
+	width: clamp(520px, 50vw, 925px);
+	aspect-ratio: 905 / 653;
+	position: absolute;
 }
 .logo {
 	width: 89px;
@@ -42,7 +73,7 @@
 			opacity: 0;
 		}
 	}
-	&:not(:checked) ~ .modal-container .register {
+	&:not(:checked) ~ .modal-container .register-form {
 		pointer-events: none;
 	}
 }

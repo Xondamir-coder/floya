@@ -1,3 +1,5 @@
+@use 'variables' as variables;
+
 @mixin invisible {
 	opacity: 0;
 	pointer-events: none;
@@ -5,4 +7,28 @@
 @mixin visible {
 	opacity: 1;
 	pointer-events: all;
+}
+@mixin bullet-point($width) {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	left: 0;
+	display: block;
+	width: $width;
+	height: $width;
+	background-color: variables.$clr-primary;
+}
+
+@mixin section-border-radius {
+	border-radius: 42px;
+
+	@media only screen and (max-width: 768px) {
+		border-radius: 12px;
+	}
+}
+@mixin curvy-section {
+	@include section-border-radius;
+	background-color: #fff;
 }

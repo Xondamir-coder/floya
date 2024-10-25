@@ -1,0 +1,97 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+
+.telegram {
+	background-color: variables.$clr-primary;
+	display: grid;
+	grid-template-columns: 0.4fr 0.6fr;
+	padding-bottom: 0;
+	gap: max(4vw, 44px);
+	overflow: hidden;
+	@include mixins.section-border-radius;
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+
+	&__left {
+		position: relative;
+		display: flex;
+		@media only screen and (max-width: 768px) {
+			order: 1;
+		}
+	}
+	&__content {
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		gap: max(4vw, 10px);
+		&-top {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			h2 {
+				font-size: clamp(36px, 3.3vw + 0.5rem, 56px);
+				font-weight: 700;
+				line-height: 1;
+				@media only screen and (max-width: 768px) {
+					max-width: 10ch;
+				}
+			}
+		}
+	}
+	&__list {
+		padding-left: 1rem;
+		list-style: initial;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	&__item {
+		font-size: 0.9rem;
+	}
+	&__box {
+		background-color: #fff;
+		padding: 1.5rem 1rem;
+		border-radius: 16.41px;
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		&:nth-child(2) {
+			@media only screen and (max-width: 768px) {
+				margin-top: 25px;
+			}
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 1.4rem;
+		}
+	}
+	&__subtitle {
+		color: variables.$clr-pink;
+		font-weight: 500;
+	}
+	&__image {
+		align-self: flex-end;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		z-index: 2;
+	}
+	&__flower {
+		width: 190%;
+		height: 190%;
+		aspect-ratio: 1030/1652;
+		position: absolute;
+		inset: 0;
+		@media only screen and (min-width: 768px) {
+			top: -10%;
+			left: -40%;
+		}
+		@media only screen and (max-width: 768px) {
+			width: 201%;
+			height: 200%;
+			left: -57%;
+			top: -20%;
+		}
+	}
+}

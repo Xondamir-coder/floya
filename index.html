@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="src/scss/main.scss" />
 		<link rel="preconnect" href="https:/fonts.googleapis.com" />
 		<link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin />
 		<link
@@ -126,67 +127,64 @@
 				</ul>
 			</menu>
 			<div class="modal-container">
-				<div class="register">
-					<label for="register-checkbox" class="register__close">
+				<div class="form register-form">
+					<label for="register-checkbox" class="form__close">
 						<svg class="icon__close fill-dark-background">
 							<use xlink:href="/src/assets/sprite.svg#close" />
 						</svg>
 					</label>
-					<svg class="register__logo fill-dark-background align-self-center">
+					<svg class="form__logo fill-dark-background align-self-center">
 						<use xlink:href="/src/assets/sprite.svg#logo" />
 					</svg>
-					<h3 class="register__title align-self-center">
+					<h3 class="form__title align-self-center">
 						<span class="text-primary">Оставьте номер</span>
 						и мы свяжемся с Вами
 					</h3>
-					<form class="register__form">
+					<form class="form__form">
 						<input
-							class="register__input"
+							class="form__input"
 							required
 							type="text"
 							name="name"
 							placeholder="Ваше ФИО" />
 						<input
-							class="register__input"
+							class="form__input"
 							required
 							type="tel"
 							name="name"
 							placeholder="Ваш Телефон" />
-						<div class="register__select">
-							<input
-								type="checkbox"
-								class="register__checkbox"
-								id="select-checkbox" />
-							<label class="register__label" for="select-checkbox">
+						<div class="form__select">
+							<input type="checkbox" class="form__checkbox" id="select-checkbox" />
+							<label class="form__label" for="select-checkbox">
 								<input
 									required
 									placeholder="Удобное время для звонка"
 									name="time" />
-								<svg class="register__icon">
+								<svg class="form__icon">
 									<use xlink:href="/src/assets/sprite.svg#arrow-down" />
 								</svg>
 							</label>
-							<ul class="register__options">
-								<li class="register__option">
+							<ul class="form__options">
+								<li class="form__option">
 									<label for="select-checkbox"> 10:00 - 12:00 </label>
 								</li>
-								<li class="register__option">
+								<li class="form__option">
 									<label for="select-checkbox"> 12:00 - 14:00 </label>
 								</li>
-								<li class="register__option">
+								<li class="form__option">
 									<label for="select-checkbox"> 14:00 - 16:00 </label>
 								</li>
-								<li class="register__option">
+								<li class="form__option">
 									<label for="select-checkbox"> 16:00 - 18:00 </label>
 								</li>
-								<li class="register__option">
+								<li class="form__option">
 									<label for="select-checkbox"> 18:00 - 20:00 </label>
 								</li>
 							</ul>
 						</div>
 						<button type="submit" class="button-primary">Зарегистрироваться</button>
 					</form>
-					<p class="register__policy">
+					<p class="form__policy">
 						Нажимая на кнопку Вы соглашаетесь с
 						<a class="text-primary" href="#">Политикой конфиденциальности</a>
 					</p>
@@ -245,6 +243,641 @@
 						alt="hero flowers" />
 				</div>
 			</section>
+			<section class="audience section-padding">
+				<svg class="audience__leaf audience__leaf-1 leaf">
+					<use xlink:href="/src/assets/sprite.svg#leaf" />
+				</svg>
+				<svg class="audience__leaf audience__leaf-2 leaf">
+					<use xlink:href="/src/assets/sprite.svg#leaf" />
+				</svg>
+				<div class="audience__top">
+					<h2 class="section-title">Кому <span class="text-primary">подходит?</span></h2>
+					<div class="section-backticktext text-tertiary">
+						<svg class="backtick">
+							<use xlink:href="/src/assets/sprite.svg#backtick" />
+						</svg>
+						<span class="section-backticktext__text">
+							Продвигай, продавай, зарабатывай вместе с
+							<span class="text-primary">FLOYA!</span>
+						</span>
+					</div>
+				</div>
+				<ul class="audience__list">
+					<li class="audience__item">
+						<div class="audience__item-container">
+							<img
+								width="362"
+								height="287"
+								src="/src/assets/images/audience-1.png"
+								alt="flower" />
+							<div class="audience__item-oval"></div>
+						</div>
+						<div class="audience__item-content">
+							<h3 class="audience__item-title">
+								Магазины <span class="text-primary">цветов</span>
+							</h3>
+							<ul class="audience__item-list">
+								<li class="audience__item-text">
+									<span>Новый канал продаж без вложений</span>
+								</li>
+								<li class="audience__item-text">
+									<span>Мощный инструмент рекламы</span>
+								</li>
+								<li class="audience__item-text">
+									<span>Расширение географии сбыта</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="audience__item">
+						<div class="audience__item-container">
+							<img
+								width="362"
+								height="287"
+								src="/src/assets/images/audience-2.png"
+								alt="flower" />
+							<div class="audience__item-oval"></div>
+						</div>
+						<div class="audience__item-content">
+							<h3 class="audience__item-title">
+								Кондитерские <span class="text-primary">и пекарни</span>
+							</h3>
+							<ul class="audience__item-list">
+								<li class="audience__item-text">
+									<span>Получить наиболее лояльную аудиторию</span>
+								</li>
+								<li class="audience__item-text">
+									<span>Возможность охватить новые рынки</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="audience__item">
+						<div class="audience__item-container">
+							<img
+								width="362"
+								height="287"
+								src="/src/assets/images/audience-3.png"
+								alt="flower" />
+							<div class="audience__item-oval"></div>
+						</div>
+						<div class="audience__item-content">
+							<h3 class="audience__item-title">
+								Магазины <span class="text-primary">подарков</span>
+							</h3>
+							<ul class="audience__item-list">
+								<li class="audience__item-text">
+									<span>Получите наиболее горячих клиентов</span>
+								</li>
+								<li class="audience__item-text">
+									<span>Кроссмаркетинговвые активности</span>
+								</li>
+								<li class="audience__item-text">
+									<span>Дополнительный канал рекламы и сбыта</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<button class="audience__button button-primary">Подробнее</button>
+				<div class="section-backticktext text-tertiary">
+					<svg class="backtick">
+						<use xlink:href="/src/assets/sprite.svg#backtick" />
+					</svg>
+					<span class="section-backticktext__text">
+						Продвигай, продавай, зарабатывай вместе с
+						<span class="text-primary">FLOYA!</span>
+					</span>
+				</div>
+			</section>
+			<section class="tasks section-padding">
+				<h2 class="section-title">
+					Задачи, которые <span class="text-primary">мы решаем</span>
+				</h2>
+				<ul class="tasks__list">
+					<li class="tasks__item">
+						<div class="tasks__item-left">
+							<h3 class="tasks__item-title">
+								<span class="text-primary">Развивайте <br /></span> Ваш бизнес без
+								рисков и затрат на:
+							</h3>
+							<ul class="tasks__item-list">
+								<li class="tasks__item-text">
+									<span class="text-secondary">Открытие новых точек</span> и
+									аренду помещения
+								</li>
+								<li class="tasks__item-text">
+									<span class="text-secondary">Найм и обучение</span> персонала
+								</li>
+								<li class="tasks__item-text">
+									<span class="text-secondary">Операционные</span> издержи
+								</li>
+							</ul>
+						</div>
+						<img
+							width="133"
+							height="212"
+							src="/src/assets/images/tasks-1.png"
+							alt="location image"
+							class="tasks__item-image" />
+					</li>
+					<li class="tasks__item">
+						<div class="tasks__item-left">
+							<h3 class="tasks__item-title">
+								<span class="text-primary">Объемы</span> продаж
+							</h3>
+							<p>
+								<span class="text-secondary">Продажи привязаны к локации</span>
+								физического магазина, мало нового и "свежего" трафика,
+							</p>
+						</div>
+						<img
+							width="111"
+							height="206"
+							src="/src/assets/images/tasks-2.png"
+							alt="graph image"
+							class="tasks__item-image" />
+					</li>
+					<li class="tasks__item">
+						<div class="tasks__item-left">
+							<h3 class="tasks__item-title">Инфраструктурные</h3>
+							<p>
+								<span class="text-secondary">Не надо организовывать доставку,</span>
+								создавать и обслуживать сайт, разбираться в рекламе и сливать
+								бюджеты на продвижение
+							</p>
+						</div>
+						<img
+							width="115"
+							height="206"
+							src="/src/assets/images/tasks-3.png"
+							alt="location image"
+							class="tasks__item-image" />
+					</li>
+				</ul>
+			</section>
+			<section class="tutorial section-padding">
+				<h2 class="section-title">Как зарегистрироваться</h2>
+				<ul class="tutorial__list">
+					<li data-number="1" class="tutorial__item">
+						<div class="tutorial__stick tutorial__stick-1"></div>
+						<span>Оставляете заявку</span>
+					</li>
+					<li data-number="2" class="tutorial__item">
+						<div class="tutorial__stick tutorial__stick-2"></div>
+						<span>Заключаем договор и регистрируем</span>
+					</li>
+					<li data-number="3" class="tutorial__item">
+						<div class="tutorial__stick tutorial__stick-3"></div>
+						<span>Рассказываем и показываем как пользоваться</span>
+					</li>
+					<li class="tutorial__item tutorial__item--backtick">
+						<div class="section-backticktext">
+							<svg class="backtick">
+								<use xlink:href="/src/assets/sprite.svg#backtick" />
+							</svg>
+							<span class="section-backticktext__text">
+								<span class="text-primary">Экономьте время,</span> деньги и нервы на
+								создании и обслуживании сайта
+							</span>
+						</div>
+					</li>
+					<li data-number="5" class="tutorial__item">
+						<div class="tutorial__stick tutorial__stick-4"></div>
+						<span>Получаете заказы и прибыль</span>
+					</li>
+					<li data-number="4" class="tutorial__item">
+						<div class="tutorial__stick tutorial__stick-5"></div>
+						<span>Помогаем создать и настроить 10 карточек товаров</span>
+					</li>
+				</ul>
+			</section>
+			<section class="gains section-padding">
+				<img class="gains__check" src="/src/assets/images/check.png" alt="check" />
+				<h2 class="section-title">
+					<span class="text-primary"> Что получите </span> от сотрудничества
+				</h2>
+				<ul class="gains__list">
+					<li class="gains__item">
+						<img
+							class="gains__item-image"
+							src="/src/assets/images/gains-1.png"
+							alt="courier" />
+						<h3 class="gains__item-title">
+							<span class="text-primary">Заказы</span> по всему городу и новых
+							клиентов
+						</h3>
+						<div class="gains__item-divider"></div>
+						<p class="gains__item-text">
+							<span class="text-tertiary"
+								>Доставляем в любой конец города бесплатно для Вас!</span
+							>
+							Вам нужно только собрать заказ.
+						</p>
+					</li>
+					<li class="gains__item">
+						<img
+							class="gains__item-image"
+							src="/src/assets/images/gains-2.png"
+							alt="courier" />
+						<h3 class="gains__item-title">
+							<span class="text-primary">Рекламу</span> и продвижение
+						</h3>
+						<div class="gains__item-divider"></div>
+						<p class="gains__item-text">
+							<span class="text-tertiary"
+								>Конкурируйте с лидерами отрасли без собственного маркетинга</span
+							>
+							и выделения рекламных бюджетов
+						</p>
+					</li>
+					<li class="gains__item">
+						<img
+							class="gains__item-image"
+							src="/src/assets/images/gains-3.png"
+							alt="courier" />
+						<h3 class="gains__item-title">
+							Продавайте <span class="text-primary">удобно</span>
+						</h3>
+						<div class="gains__item-divider"></div>
+						<p class="gains__item-text">
+							<span class="text-tertiary">Интуитивно понятный сервис! </span>
+							Максимальная помощь на всех этапах работы.
+						</p>
+					</li>
+				</ul>
+			</section>
+			<section class="workflow section-padding">
+				<h2 class="section-title">Как это работает?</h2>
+				<div class="workflow__container">
+					<form class="workflow__form">
+						<h3 class="workflow__form-title">Рассчитать прибыль</h3>
+						<div class="workflow__form-inputs">
+							<input
+								placeholder="Стоимость товара"
+								required
+								type="number"
+								class="workflow__input"
+								id="workflow-input"
+								name="price" />
+							<svg>
+								<use xlink:href="/src/assets/sprite.svg#equal" />
+							</svg>
+							<output type="text" class="workflow__input" id="workflow-output">
+								Вы получите
+							</output>
+						</div>
+						<div class="workflow__form-months">
+							<input
+								required
+								type="checkbox"
+								id="workflow-checkbox"
+								name="3-months"
+								class="workflow__checkbox" />
+							<label for="workflow-checkbox">Первые 3 месяца с FLOYA</label>
+						</div>
+						<ul class="workflow__things">
+							<li class="workflow__thing">300₽ Комиссия (10%)</li>
+							<li class="workflow__thing">60₽ Эквайринг (2%)</li>
+							<li class="workflow__thing">Всегда 0₽ Доставка</li>
+						</ul>
+						<button type="submit" class="button-primary">
+							Начать принимать заказы
+						</button>
+					</form>
+					<ul class="workflow__right">
+						<svg class="workflow__stick">
+							<use xlink:href="/src/assets/sprite.svg#workflow-stick" />
+						</svg>
+						<div class="workflow__stick--small"></div>
+						<li class="workflow__item">
+							<span>Принимайте заказ</span>
+						</li>
+						<li class="workflow__item">
+							<span>Формируйте заказ</span>
+						</li>
+						<li class="workflow__item">
+							<span>Отправляйте доставкой</span>
+						</li>
+						<li class="workflow__item">
+							<span>Получайте деньги на расчетный счет</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="telegram section-padding">
+				<div class="telegram__left">
+					<svg class="telegram__flower">
+						<use xlink:href="/src/assets/sprite.svg#big-flower" />
+					</svg>
+					<img src="/src/assets/images/phone.png" alt="phone" class="telegram__image" />
+				</div>
+				<div class="telegram__content">
+					<div class="telegram__content-top">
+						<h2 class="section-title text-white">Floya внутри телеграма</h2>
+						<h3 class="telegram__subtitle">
+							Market-платформа для продажи Ваших товаров УЖЕ доступно пользователям
+							Telegram! Без дополнительных приложений!
+						</h3>
+					</div>
+					<div class="telegram__box">
+						<h4 class="telegram__box-title">
+							FLOYA: Маркетплейс <span class="text-primary">без установки!</span>
+						</h4>
+						<ul class="telegram__list">
+							<li class="telegram__item">
+								<strong class="text-secondary">Удобство:</strong>
+								<span>
+									Приложение установлено в Telegram, и доступно на любом
+									устройстве
+								</span>
+							</li>
+							<li class="telegram__item">
+								<strong class="text-secondary">Полный функционал:</strong>
+								<span> FLOYA в Telegram идентично веб-версии. </span>
+							</li>
+							<li class="telegram__item">
+								<strong class="text-secondary">Доступно всем:</strong>
+								<span>
+									85 млн пользователей в РФ уже могут использовать FLOYA
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="telegram__box">
+						<h4 class="telegram__box-title">
+							Почему мы <span class="text-primary">выбрали Telegram?</span>
+						</h4>
+						<ul class="telegram__list">
+							<li class="telegram__item">
+								<strong class="text-secondary">Популярность:</strong>
+								<span> Более 65% жителей РФ используют Telegram. </span>
+							</li>
+							<li class="telegram__item">
+								<strong class="text-secondary">Среднее время использования</strong>
+								<span>- более 1,5 ч. в день. </span>
+							</li>
+							<li class="telegram__item">
+								<strong class="text-secondary">Доступность:</strong>
+								<span>
+									Telegram не зависит от магазинов приложений и санкций.
+								</span>
+							</li>
+							<li class="telegram__item">
+								<strong class="text-secondary">Упрощенный доступ:</strong>
+								<span> FLOYA позволяет легко пользоваться маркетплейсом. </span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="convenience section-padding">
+				<div class="section-top">
+					<h2 class="section-title">С нами <span class="text-primary">удобно</span></h2>
+					<div class="section-backticktext text-tertiary">
+						<svg class="backtick">
+							<use xlink:href="/src/assets/sprite.svg#backtick" />
+						</svg>
+						<span class="section-backticktext__text">
+							Современные решения для увеличения количества и качества чеков
+						</span>
+					</div>
+				</div>
+				<ul class="convenience__list">
+					<li class="convenience__item">
+						<div class="convenience__item-content">
+							<h3 class="convenience__item-title">
+								Техническая
+								<span class="text-primary"> поддержка 24/7 </span>
+							</h3>
+							<p class="convenience__item-text">
+								Наши сотрудники всегда на связи. Они помогут решить любые сложности
+								с сервисом, клиентом или решить спорную ситуацию
+							</p>
+						</div>
+						<img
+							class="convenience__item-image"
+							src="/src/assets/images/convenience-1.png"
+							alt="chat photo" />
+					</li>
+					<li class="convenience__item">
+						<div class="convenience__item-content">
+							<h3 class="convenience__item-title">
+								<span class="text-primary"> Система</span>
+								рекомендаций
+							</h3>
+							<p class="convenience__item-text">
+								Размещайте прямую ссылку на Ваш магазин и не платите комиссию!
+								Создавайте сеть своих клиентов и зарабатывайте больше.
+							</p>
+						</div>
+						<img
+							class="convenience__item-image"
+							src="/src/assets/images/convenience-2.png"
+							alt="chat photo" />
+					</li>
+					<li class="convenience__item">
+						<div class="convenience__item-content">
+							<h3 class="convenience__item-title">
+								Внутреняя
+								<span class="text-primary"> валюта </span>
+							</h3>
+							<p class="convenience__item-text">
+								Ваши клиенты смогут получать бонусные баллы и тратить  их в вашем
+								магазине
+							</p>
+						</div>
+						<img
+							class="convenience__item-image"
+							src="/src/assets/images/convenience-3.png"
+							alt="chat photo" />
+					</li>
+					<li class="convenience__item">
+						<div class="convenience__item-content">
+							<h3 class="convenience__item-title">
+								Фирменная
+								<span class="text-primary"> упаковка </span>
+							</h3>
+							<p class="convenience__item-text">
+								Бесплатно предоставим раздаточный материал: упаковка, открытки,
+								визитки
+							</p>
+						</div>
+						<img
+							class="convenience__item-image"
+							src="/src/assets/images/hero-flower.png"
+							alt="chat photo" />
+					</li>
+				</ul>
+			</section>
+			<section class="ad section-padding">
+				<div class="ad__wrapper">
+					<div class="ad__left">
+						<svg class="ad__leaf leaf">
+							<use xlink:href="/src/assets/sprite.svg#leaf" />
+						</svg>
+						<div class="ad__circle"></div>
+						<img
+							src="/src/assets/images/microphone.png"
+							alt="microphone"
+							class="ad__microphone" />
+					</div>
+					<div class="ad__right">
+						<div class="ad__top">
+							<h2 class="section-title">
+								<span class="text-primary">Настроим</span> вашу рекламу
+							</h2>
+							<p class="ad__subtitle">
+								Наши маркетологи помогут с настройками рекламы внутри маркетплейса
+							</p>
+						</div>
+						<div class="section-backticktext text-tertiary">
+							<svg class="backtick">
+								<use xlink:href="/src/assets/sprite.svg#backtick" />
+							</svg>
+							<span class="section-backticktext__text">
+								<span class="text-primary"
+									>Привлекайте клиентов, увеличивайте чек,</span
+								>
+								повышайте лояльность клиентов!
+							</span>
+						</div>
+						<button class="button-primary">
+							Узнать подробнее
+							<svg class="ad__icon">
+								<use xlink:href="/src/assets/sprite.svg#arrow-right" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<footer class="footer section-padding">
+				<h2 class="section-title">Остались вопросы?</h2>
+				<div class="footer__content">
+					<div class="form footer-form">
+						<h3 class="form__title align-self-center">
+							<span class="text-primary">Оставьте заявку</span>
+							и наш специалист свяжется с Вами
+						</h3>
+						<form class="form__form">
+							<input
+								class="form__input"
+								required
+								type="text"
+								name="name"
+								placeholder="Ваше ФИО" />
+							<input
+								class="form__input"
+								required
+								type="tel"
+								name="name"
+								placeholder="Ваш Телефон" />
+							<div class="form__select">
+								<input
+									type="checkbox"
+									class="form__checkbox"
+									id="footer-select-checkbox" />
+								<label class="form__label" for="footer-select-checkbox">
+									<input
+										required
+										placeholder="Удобное время для звонка"
+										name="time" />
+									<svg class="form__icon">
+										<use xlink:href="/src/assets/sprite.svg#arrow-down" />
+									</svg>
+								</label>
+								<ul class="form__options">
+									<li class="form__option">
+										<label for="footer-select-checkbox"> 10:00 - 12:00 </label>
+									</li>
+									<li class="form__option">
+										<label for="footer-select-checkbox"> 12:00 - 14:00 </label>
+									</li>
+									<li class="form__option">
+										<label for="footer-select-checkbox"> 14:00 - 16:00 </label>
+									</li>
+									<li class="form__option">
+										<label for="footer-select-checkbox"> 16:00 - 18:00 </label>
+									</li>
+									<li class="form__option">
+										<label for="footer-select-checkbox"> 18:00 - 20:00 </label>
+									</li>
+								</ul>
+							</div>
+							<button type="submit" class="button-primary">Зарегистрироваться</button>
+						</form>
+						<p class="form__policy">
+							Нажимая на кнопку Вы соглашаетесь с
+							<a class="text-primary" href="#">Политикой конфиденциальности</a>
+						</p>
+					</div>
+					<div class="footer__image-container">
+						<img
+							src="/src/assets/images/person.png"
+							alt="person"
+							class="footer__image" />
+						<div class="footer__oval"></div>
+					</div>
+					<div class="footer__right">
+						<ul class="footer__list">
+							<li class="footer__subtitle">Наш менеджер:</li>
+							<li class="footer__item">Ответит на ваши вопросы</li>
+							<li class="footer__item">Поможет разобраться в деталях</li>
+							<li class="footer__item">Расскажет о схеме работы</li>
+						</ul>
+						<a href="tel:+8 800 800 80 80" class="button-tel">
+							<div class="icon-container border-clr-primary">
+								<svg class="icon fill-primary">
+									<use xlink:href="/src/assets/sprite.svg#phone" />
+								</svg>
+							</div>
+							<span>Остались вопросы?</span>
+						</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-left">
+						<svg class="logo fill-white">
+							<use xlink:href="/src/assets/sprite.svg#logo" />
+						</svg>
+						<p>© 2024 ООО «ФЛОЯ»</p>
+						<a href="#"> Политика конфиденциальности </a>
+					</div>
+					<div class="footer__bottom-right">
+						<ul class="header__links">
+							<li>
+								<a class="icon-container bg-light border-clr-transparent" href="#">
+									<svg class="icon fill-primary">
+										<use xlink:href="/src/assets/sprite.svg#mail"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="icon-container bg-light border-clr-transparent" href="#">
+									<svg class="icon fill-primary">
+										<use xlink:href="/src/assets/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="icon-container bg-light border-clr-transparent" href="#">
+									<svg class="icon fill-primary">
+										<use xlink:href="/src/assets/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<a href="tel:+8 800 800 80 80" class="header__tel header__tel--big">
+							<div class="icon-container border-clr-light">
+								<svg class="icon fill-light">
+									<use xlink:href="/src/assets/sprite.svg#phone"></use>
+								</svg>
+							</div>
+							<span>8-800-800-80-80</span>
+						</a>
+					</div>
+				</div>
+			</footer>
 		</main>
 		<script type="module" src="/src/main.js"></script>
 	</body>
