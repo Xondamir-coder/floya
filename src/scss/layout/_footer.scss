@@ -68,6 +68,9 @@
 	&__copyright {
 		display: flex;
 		gap: 4vw;
+		a {
+			text-decoration: underline;
+		}
 		&--big {
 			@media only screen and (max-width: 768px) {
 				display: none;

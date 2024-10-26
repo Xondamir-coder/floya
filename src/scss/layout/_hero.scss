@@ -74,6 +74,10 @@
 			align-content: flex-end;
 		}
 	}
+	&__img {
+		width: 100%;
+		height: auto;
+	}
 	&__image {
 		align-self: flex-end;
 		// margin-left: auto;
