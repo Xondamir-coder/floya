@@ -1,11 +1,23 @@
 $font-base: 'Inter', sans-serif;
 
-$clr-primary: #d62f50;
-$clr-secondary: #2d1d21;
-$clr-tertiary: #81545d;
-$clr-background: #f5f1f2;
-$clr-light: #fbeaee;
-$clr-dark-background: #c6b2b6;
-$clr-divider: #e8e0e1;
-$clr-pink: #f2bfc9;
-$clr-primary-dark: #a1233c;
+// $clr-primary: #d62f50;
+// $clr-secondary: #2d1d21;
+// $clr-tertiary: #81545d;
+// $clr-background: #f5f1f2;
+// $clr-light: #fbeaee;
+// $clr-dark-background: #c6b2b6;
+// $clr-divider: #e8e0e1;
+// $clr-pink: #f2bfc9;
+// $clr-primary-dark: #a1233c;
+
+$clr-primary: rgb(214, 47, 80);
+$clr-secondary: rgb(45, 29, 33);
+$clr-tertiary: rgb(129, 69, 93);
+$clr-background: rgb(245, 241, 242);
+$clr-light: rgb(251, 234, 238);
+$clr-dark-background: rgb(198, 178, 182);
+$clr-divider: rgb(232, 224, 225);
+$clr-pink: rgb(242, 190, 201);
+$clr-primary-dark: rgb(162, 35, 60);
+$clr-error: rgb(205, 11, 0);
+$clr-error-bg: rgb(250, 231, 230);

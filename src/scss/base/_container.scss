@@ -2,9 +2,13 @@
 @use '../abstracts/mixins' as mixins;
 
 .section-title {
-	font-size: clamp(26px, 3.3vw + 0.5rem, 56px);
+	font-size: clamp(28px, 3.3vw + 0.5rem, 56px);
 	font-weight: 700;
 	line-height: 1;
+
+	@media only screen and (max-width: 768px) {
+		max-width: 20ch;
+	}
 }
 .section-backticktext {
 	display: flex;
@@ -14,7 +18,7 @@
 		margin-top: 10px;
 		max-width: 30ch;
 		font-weight: 500;
-		font-size: 1.2rem;
+		font-size: max(1.2rem, 20px);
 	}
 }
 .section-top {
@@ -75,5 +79,32 @@
 	}
 	&:not(:checked) ~ .modal-container .register-form {
 		pointer-events: none;
+	}
+}
+
+.link-tel {
+	display: flex;
+	gap: 1rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	align-items: center;
+	color: variables.$clr-light;
+	&--big {
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	&--small {
+		@media only screen and (min-width: 768px) {
+			display: none;
+		}
+	}
+	&:hover {
+		.icon-container {
+			background-color: variables.$clr-light;
+		}
+		.icon {
+			fill: variables.$clr-primary !important;
+		}
 	}
 }

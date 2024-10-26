@@ -44,8 +44,11 @@
 			padding: 25px;
 		}
 		&-title {
-			font-size: 1.3rem;
+			font-size: 22px;
 			font-weight: 700;
+			@media only screen and (max-width: 768px) {
+				max-width: 18ch;
+			}
 		}
 		&-text {
 			max-width: 30ch;
@@ -72,7 +75,6 @@
 			height: auto;
 			object-fit: contain;
 			aspect-ratio: 246/145;
-			filter: drop-shadow(6px 6.79px 12.11px rgba(156, 120, 147, 0.3725490196));
 		}
 	}
 }

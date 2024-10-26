@@ -27,11 +27,22 @@ const staggeredAnimation = (elements, staggerValue, xDirection, yDirection = 0, 
 };
 
 // Audience items animation
-staggeredAnimation(
-	Array.from(document.querySelectorAll('.audience__item')).map(el => el.children),
-	0.3,
-	50
-);
+// staggeredAnimation(
+// 	Array.from(document.querySelectorAll('.audience__item')).map(el => el.children),
+// 	0.3,
+// 	50
+// );
+Array.from(document.querySelectorAll('.audience__item')).forEach(el => {
+	gsap.from(el.children, {
+		...fadeInAnimation,
+		stagger: 0.2,
+		x: -50,
+		scrollTrigger: {
+			trigger: el,
+			start: '20% 80%'
+		}
+	});
+});
 
 // Tasks items animation
 staggeredAnimation(Array.from(document.querySelectorAll('.tasks__item')), 0, -50, 50);
@@ -39,7 +50,6 @@ staggeredAnimation(Array.from(document.querySelectorAll('.tasks__item')), 0, -50
 // Tutorial items animation
 gsap.from('.tutorial__item', {
 	...fadeInAnimation,
-	stagger: 0.2,
 	scale: 0.5,
 	scrollTrigger: {
 		trigger: '.tutorial__item',
@@ -74,6 +84,16 @@ gsap.from('.telegram__content > *', {
 	...fadeInAnimation,
 	scrollTrigger: {
 		trigger: '.telegram__content',
+		start: '20% bottom'
+	}
+});
+
+// Telegram image
+gsap.from('.telegram__image', {
+	...fadeInAnimation,
+	y: 150,
+	scrollTrigger: {
+		trigger: '.telegram__image',
 		start: '20% bottom'
 	}
 });

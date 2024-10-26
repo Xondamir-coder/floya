@@ -6,6 +6,9 @@
 	gap: 4.5rem;
 	overflow: hidden;
 	position: relative;
+	@media only screen and (max-width: 768px) {
+		gap: 31px;
+	}
 	&__leaf {
 		@media only screen and (max-width: 768px) {
 			display: none;
@@ -96,14 +99,16 @@
 	&__input {
 		width: 100%;
 		background-color: #f8f6f6;
-		color: variables.$clr-dark-background;
 		font-weight: 500;
 		outline: none;
 		padding: 16px;
 		align-self: stretch;
 		border-radius: 12px;
+		&#workflow-output:not(.show) {
+			color: variables.$clr-dark-background;
+		}
 		&::placeholder {
-			color: inherit;
+			color: variables.$clr-dark-background;
 		}
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
@@ -130,6 +135,14 @@
 		border-radius: 16px;
 		border: 1px solid variables.$clr-divider;
 		text-align: center;
+	}
+	h2 {
+		font-size: clamp(34px, 3.3vw + 0.5rem, 56px);
+		font-weight: 700;
+		line-height: 1;
+		@media only screen and (max-width: 768px) {
+			text-align: center;
+		}
 	}
 	&__checkbox {
 		border-radius: 7px;
@@ -207,6 +220,10 @@
 
 			@media only screen and (max-width: 768px) {
 				border-radius: 100px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 70%;
+				text-align: center;
 			}
 		}
 	}

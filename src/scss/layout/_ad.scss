@@ -2,6 +2,10 @@
 @use '../abstracts/mixins' as mixins;
 
 .ad {
+	@media only screen and (max-width: 768px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1.5fr;
@@ -23,6 +27,7 @@
 	&__icon {
 		width: 9px;
 		height: 14px;
+		fill: #fff;
 	}
 	&__circle {
 		background-color: variables.$clr-primary;
@@ -94,6 +99,7 @@
 				max-width: 65%;
 				.section-backticktext__text {
 					margin-top: 5px;
+					font-size: 16px;
 				}
 				.backtick {
 					width: 60px;
