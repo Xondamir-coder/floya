@@ -288,10 +288,16 @@
 					<svg class="hero__flower">
 						<use xlink:href="/src/assets/sprite.svg#big-flower" />
 					</svg>
-					<img
-						class="hero__image"
-						src="/src/assets/images/hero-flower.png"
-						alt="hero flowers" />
+					<picture class="hero__image">
+						<source
+							srcset="/src/assets/images/hero-flower-small.webp"
+							media="(max-width: 768px)" />
+						<img
+							width="724"
+							height="751"
+							src="/src/assets/images/hero-flower.webp"
+							alt="hero flowers" />
+					</picture>
 				</div>
 			</section>
 			<section class="audience section-padding">
@@ -319,7 +325,7 @@
 							<img
 								width="362"
 								height="287"
-								src="/src/assets/images/audience-1.png"
+								src="/src/assets/images/audience-1.webp"
 								alt="flower" />
 							<div class="audience__item-oval"></div>
 						</div>
@@ -345,7 +351,7 @@
 							<img
 								width="362"
 								height="287"
-								src="/src/assets/images/audience-2.png"
+								src="/src/assets/images/audience-2.webp"
 								alt="flower" />
 							<div class="audience__item-oval"></div>
 						</div>
@@ -368,7 +374,7 @@
 							<img
 								width="362"
 								height="287"
-								src="/src/assets/images/audience-3.png"
+								src="/src/assets/images/audience-3.webp"
 								alt="flower" />
 							<div class="audience__item-oval"></div>
 						</div>
@@ -431,7 +437,7 @@
 							<img
 								width="133"
 								height="212"
-								src="/src/assets/images/tasks-1.png"
+								src="/src/assets/images/tasks-1.webp"
 								alt="location image"
 								class="tasks__item-image" />
 						</div>
@@ -450,7 +456,7 @@
 							<img
 								width="111"
 								height="206"
-								src="/src/assets/images/tasks-2.png"
+								src="/src/assets/images/tasks-2.webp"
 								alt="graph image"
 								class="tasks__item-image" />
 						</div>
@@ -468,7 +474,7 @@
 							<img
 								width="115"
 								height="206"
-								src="/src/assets/images/tasks-3.png"
+								src="/src/assets/images/tasks-3.webp"
 								alt="location image"
 								class="tasks__item-image" />
 						</div>
@@ -515,15 +521,22 @@
 				</ul>
 			</section>
 			<section class="gains section-padding">
-				<img class="gains__check" src="/src/assets/images/check.png" alt="check" />
+				<img
+					width="442"
+					height="477"
+					class="gains__check"
+					src="/src/assets/images/check.webp"
+					alt="check" />
 				<h2 class="section-title">
 					<span class="text-primary"> Что получите </span> от сотрудничества
 				</h2>
 				<ul class="gains__list">
 					<li class="gains__item">
 						<img
+							width="256"
+							height="171"
 							class="gains__item-image"
-							src="/src/assets/images/gains-1.png"
+							src="/src/assets/images/gains-1.webp"
 							alt="courier" />
 						<h3 class="gains__item-title">
 							<span class="text-primary">Заказы</span> по всему городу и новых
@@ -539,8 +552,10 @@
 					</li>
 					<li class="gains__item">
 						<img
+							width="228"
+							height="128"
 							class="gains__item-image"
-							src="/src/assets/images/gains-2.png"
+							src="/src/assets/images/gains-2.webp"
 							alt="courier" />
 						<h3 class="gains__item-title">
 							<span class="text-primary">Рекламу</span> и продвижение
@@ -555,8 +570,10 @@
 					</li>
 					<li class="gains__item">
 						<img
+							width="450"
+							height="193"
 							class="gains__item-image"
-							src="/src/assets/images/gains-3.png"
+							src="/src/assets/images/gains-3.webp"
 							alt="courier" />
 						<h3 class="gains__item-title">
 							Продавайте <span class="text-primary">удобно</span>
@@ -641,7 +658,12 @@
 					<svg class="telegram__flower">
 						<use xlink:href="/src/assets/sprite.svg#big-flower" />
 					</svg>
-					<img src="/src/assets/images/phone.png" alt="phone" class="telegram__image" />
+					<img
+						width="940"
+						height="1332"
+						src="/src/assets/images/phone.webp"
+						alt="phone"
+						class="telegram__image" />
 				</div>
 				<div class="telegram__content">
 					<div class="telegram__content-top">
@@ -728,8 +750,10 @@
 							</p>
 						</div>
 						<img
+							width="405"
+							height="537"
 							class="convenience__item-image"
-							src="/src/assets/images/convenience-1.png"
+							src="/src/assets/images/convenience-1.webp"
 							alt="chat photo" />
 					</li>
 					<li class="convenience__item">
@@ -745,8 +769,10 @@
 							</p>
 						</div>
 						<img
+							width="528"
+							height="617"
 							class="convenience__item-image"
-							src="/src/assets/images/convenience-2.png"
+							src="/src/assets/images/convenience-2.webp"
 							alt="chat photo" />
 					</li>
 					<li class="convenience__item">
@@ -762,8 +788,10 @@
 							</p>
 						</div>
 						<img
+							width="599"
+							height="501"
 							class="convenience__item-image"
-							src="/src/assets/images/convenience-3.png"
+							src="/src/assets/images/convenience-3.webp"
 							alt="chat photo" />
 					</li>
 				</ul>
@@ -776,7 +804,9 @@
 						</svg>
 						<div class="ad__circle"></div>
 						<img
-							src="/src/assets/images/microphone.png"
+							width="560"
+							height="580"
+							src="/src/assets/images/microphone.webp"
 							alt="microphone"
 							class="ad__microphone" />
 					</div>
@@ -890,10 +920,17 @@
 							<span>Остались вопросы?</span>
 						</a>
 						<div class="footer__image-container">
-							<img
-								src="/src/assets/images/person.png"
-								alt="person"
-								class="footer__image" />
+							<picture class="footer__image">
+								<source
+									srcset="/src/assets/images/person-small.webp"
+									media="(max-width: 768px)" />
+								<img
+									width="1158"
+									height="1270"
+									src="/src/assets/images/person.webp"
+									alt="person"
+									class="footer__image" />
+							</picture>
 							<div class="footer__oval"></div>
 						</div>
 						<ul class="footer__list">
