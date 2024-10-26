@@ -847,34 +847,64 @@
 				<h2 class="section-title">Остались вопросы?</h2>
 				<div class="footer__content">
 					<div class="form footer-form">
+						<label for="register-checkbox" class="form__close">
+							<svg class="icon__close fill-dark-background">
+								<use xlink:href="/src/assets/sprite.svg#close" />
+							</svg>
+						</label>
+						<svg class="form__logo fill-dark-background align-self-center">
+							<use xlink:href="/src/assets/sprite.svg#logo" />
+						</svg>
 						<h3 class="form__title align-self-center">
-							<span class="text-primary">Оставьте заявку</span>
-							<br />
-							и наш специалист свяжется с Вами
+							<span class="text-primary">Оставьте номер</span> <br />
+							и мы свяжемся с Вами
 						</h3>
 						<form class="form__form">
-							<input
-								class="form__input"
-								required
-								type="text"
-								name="name"
-								placeholder="Ваше ФИО" />
-							<input
-								class="form__input"
-								required
-								type="tel"
-								name="name"
-								placeholder="Ваш Телефон" />
+							<div class="form__input-container">
+								<input
+									class="form__input text-secondary"
+									required
+									type="text"
+									name="name"
+									placeholder="" />
+								<button class="form__clear">
+									<svg class="form__clear-icon">
+										<use xlink:href="/src/assets/sprite.svg#clear" />
+									</svg>
+								</button>
+								<label class="form__input-label">Ваше ФИО</label>
+							</div>
+							<div class="form__input-container">
+								<input
+									class="form__input text-secondary"
+									required
+									type="tel"
+									name="tel"
+									placeholder="" />
+								<button class="form__clear">
+									<svg class="form__clear-icon">
+										<use xlink:href="/src/assets/sprite.svg#clear" />
+									</svg>
+								</button>
+								<label class="form__input-label">Ваш Телефон</label>
+							</div>
 							<div class="form__select">
 								<input
 									type="checkbox"
 									class="form__checkbox"
 									id="footer-select-checkbox" />
-								<label class="form__label" for="footer-select-checkbox">
+								<label
+									class="form__label text-dark-background"
+									for="footer-select-checkbox">
 									<input
+										class="form__select-input"
 										required
-										placeholder="Удобное время для звонка"
+										placeholder=""
+										type="text"
 										name="time" />
+									<label class="form__input-label"
+										>Удобное время для звонка</label
+									>
 									<svg class="form__icon">
 										<use xlink:href="/src/assets/sprite.svg#arrow-down" />
 									</svg>
